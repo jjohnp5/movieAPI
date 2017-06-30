@@ -1,0 +1,112 @@
+
+html, body{
+    height: 100%;
+}
+body{
+    background: #565656;
+    color: #e2e2e2;
+}
+.thumbnail{
+    background-color: transparent;
+    border: none;
+}
+
+.caption span{color: #e2e2e2;
+}
+.caption h1, p{
+    color: #e2e2e2;
+}
+.img-responsive{
+    border: 3px outset #e2e2e2;
+}
+
+
+/*landing css styles */
+.landing-container {
+    z-index: 10;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 40vh;
+    position: relative;
+}
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+.slideshow li:nth-child(1) {
+    background-image: url(resources/jake-hills-194864.jpg)
+}
+.slideshow li:nth-child(2) {
+    background-image: url(resources/jakob-owens-199505.jpg);
+    animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+    background-image: url(resources/david-condrey-57500.jpg);
+    animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+    background-image: url(resources/hannu-pekka-peuranen-1301.jpg);
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+    background-image: url(resources/elijah-flores-99207.jpg);
+    animation-delay: 40s;
+}
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1
+    }
+    30% {
+        opacity: 0
+    }
+}
+
+/*RATINGS*/
+.star-ratings-sprite {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    font-size: 0;
+    height: 21px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 110px;
+    margin: 0 auto;
+}
+
+.star-ratings-sprite-rating {
+     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+     background-position: 0 100%;
+     float: left;
+     height: 21px;
+     display:block;
+ }
+
+

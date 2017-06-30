@@ -1,0 +1,27 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+<% results.forEach(function(result){%>
+    <% if(result.vote_count >= 3000){%>
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="thumbnail">
+                <img  class="img-responsive" src="https://image.tmdb.org/t/p/w500<%=result.poster_path %>"/>
+                <div class="caption">
+                    <div class="star-ratings-sprite">
+                        <span style="width:<%=result.vote_average*10%>%" class="star-ratings-sprite-rating"></span>
+                    </div>
+                    <span class="pull-right">Votes: <b><%=result.vote_count%></b></span>
+                    <h1><%=result.title%></h1>
+                    <p><%=result.overview.substring(0,100) %>...</p>
+                    <p>Release Date: <b><%= result.release_date%></b> </p>
+                </div>
+            </div>
+        </div>
+
+        <% }%>
+        <% })%>
+    </div>
+
+</div>
+<% include partials/footer %>
