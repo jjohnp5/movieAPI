@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<div class="text-center">
+    <h1>Search Route</h1>
+</div>
+<div class="container-fluid">
+    <%result.results.forEach(function(movie){ %>
+    <%if(movie.original_language === "en"){%>
+    <div class="movie">
+        <div class="thumbnail">
+            <img  class="img-responsive" src="https://image.tmdb.org/t/p/w500<%=movie.poster_path %>"/>
+            <div class="caption">
+                <div class="star-ratings-sprite">
+                    <span style="width:<%=movie.vote_average*10%>%" class="star-ratings-sprite-rating"></span>
+                </div>
+                <span>Score: <%=movie.vote_average*10%>%</span>
+                <span class="pull-right">Votes: <b><%=movie.vote_count%></b></span>
+                <h1><%=movie.title%></h1>
+                <p><%=movie.overview.substring(0,100) %>...</p>
+                <p>Release Date: <b><%= movie.release_date%></b> </p>
+            </div>
+        </div>
+    </div>
+
+    <%}});%>
+
+</div>
+
+<% include partials/footer %>

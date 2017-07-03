@@ -19,6 +19,39 @@ body{
 .img-responsive{
     border: 3px outset #e2e2e2;
 }
+@media screen
+    and (min-width: 320px)
+    and (max-width: 600px)
+{
+    .movie{
+        width: 100%;
+        float: left;
+        display: block;
+    }
+}
+@media screen
+    and (min-width: 600px)
+    and (max-width: 1199px)
+
+{
+    .movie{
+        width: 50%;
+        float: left;
+        display: block;
+    }
+}
+@media screen
+    and (min-width: 1200px)
+{
+    .movie{
+        width: 33%;
+        float: left;
+        display: block;
+    }
+}
+.search{
+    margin: auto;
+}
 
 
 /*landing css styles */
