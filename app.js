@@ -41,13 +41,24 @@ app.post("/movies/search", function (req, res) {
        res.render("search", {result: result})
     });
 });
+
 app.get("/movies/popular", function (req, res) {
     request("https://api.themoviedb.org/3/movie/popular?api_key=f2542b8b01898f42918c9addc4ed07a0", function (error, response, body) {
         var result = JSON.parse(body);
         res.render("popular", {results: result.results});
     })
 });
+app.get("/movies/:id", function (req, res) {
+    console.log(req.params.id);
+    request("https://api.themoviedb.org/3/movie/"+req.params.id+"?api_key=f2542b8b01898f42918c9addc4ed07a0", function (error, response, movie) {
+        var result = JSON.parse(body);
+        request("https://api.themoviedb.org/3/movie/"+req.params.id+"/reviews?api_key=f2542b8b01898f42918c9addc4ed07a0&language=en-US&page=1", function (error, response, revs) {
+            var reviews = JSON.parse(revs);
+            res.render("movie", {result: result, reviews: reviews});
 
+        });
+    });
+});
 
 app.listen(3000, function () {
     console.log("movie api started");

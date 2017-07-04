@@ -15,7 +15,7 @@
                 </div>
                 <span>Score: <%=movie.vote_average*10%>%</span>
                 <span class="pull-right">Votes: <b><%=movie.vote_count%></b></span>
-                <h1><%=movie.title%></h1>
+                <a href="/movies/<%=movie.id%>"><h1><%=movie.title%></h1></a>
                 <p><%=movie.overview.substring(0,100) %>...</p>
                 <p>Release Date: <b><%= movie.release_date%></b> </p>
             </div>
