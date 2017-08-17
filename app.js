@@ -51,7 +51,7 @@ app.get("/movies/popular", function (req, res) {
 app.get("/movies/:id", function (req, res) {
     console.log(req.params.id);
     request("https://api.themoviedb.org/3/movie/"+req.params.id+"?api_key=f2542b8b01898f42918c9addc4ed07a0", function (error, response, movie) {
-        var result = JSON.parse(body);
+        var result = JSON.parse(movie);
         request("https://api.themoviedb.org/3/movie/"+req.params.id+"/reviews?api_key=f2542b8b01898f42918c9addc4ed07a0&language=en-US&page=1", function (error, response, revs) {
             var reviews = JSON.parse(revs);
             res.render("movie", {result: result, reviews: reviews});
