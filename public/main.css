@@ -87,22 +87,22 @@ body{
     animation: imageAnimation 50s linear infinite;
 }
 .slideshow li:nth-child(1) {
-    background-image: url(resources/jake-hills-194864.jpg)
+    background-image: url(resources/hills.jpg)
 }
 .slideshow li:nth-child(2) {
-    background-image: url(resources/jakob-owens-199505.jpg);
+    background-image: url(resources/owens.jpg);
     animation-delay: 10s;
 }
 .slideshow li:nth-child(3) {
-    background-image: url(resources/david-condrey-57500.jpg);
+    background-image: url(resources/david.jpg);
     animation-delay: 20s;
 }
 .slideshow li:nth-child(4) {
-    background-image: url(resources/hannu-pekka-peuranen-1301.jpg);
+    background-image: url(resources/hannu.jpg);
     animation-delay: 30s;
 }
 .slideshow li:nth-child(5) {
-    background-image: url(resources/elijah-flores-99207.jpg);
+    background-image: url(resources/elijah.jpg);
     animation-delay: 40s;
 }
 @keyframes imageAnimation {
